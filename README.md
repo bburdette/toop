@@ -1,1 +1,35 @@
-# toop
+# Toop 
+
+A set of tuple-like data structures that allow more than 3 elements.
+
+I use case statements to pattern match multiple things at once, like so:
+
+```elm
+
+import Toop
+
+case Toop.T4 mba mbb mbc mbd of 
+  Toop.T4 (Just a) (Just b) (Just c) (Just d) -> 
+    -- we've got all the things!
+  _ -> 
+    -- failure to get all the things.
+
+```
+
+Along with the basic T<n> types (T1, T2, etc), there applyT<n> functions.
+
+apply calls a function using the Toop elements as the arguments.  
+
+```elm
+
+args = Toop.T6 "this" 5 "that" 6 (<) "less than" 
+
+comp name1 val1 name2 val2 op opname = 
+  if op val1 val2 then 
+    name1 ++ " is " ++ opname  ++ name2
+  else
+    name2 ++ " is " ++ opname  ++ name1
+
+resultString = Toop.Apply.applyT6 comp args
+
+```
