@@ -2,7 +2,8 @@
 
 A set of tuple-like data structures that allow more than 3 elements.
 
-I use case statements to pattern match multiple things at once, like so:
+The main thing I use Toop for is in case statements, to pattern match 
+multiple things at once:
 
 ```elm
 
@@ -16,7 +17,7 @@ case Toop.T4 mba mbb mbc mbd of
 
 ```
 
-Along with the basic T<n> types (T1, T2, etc), there applyT<n> functions.
+there are also applyT<n> functions.  
 
 apply calls a function using the Toop elements as the arguments.  
 
