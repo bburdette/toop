@@ -3,7 +3,7 @@
     "name": "bburdette/toop",
     "summary": "tuple-like datastructure allowing more than 3 elements.",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "exposed-modules": [
         "Toop" 
     ],
