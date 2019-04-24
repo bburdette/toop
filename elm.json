@@ -5,9 +5,7 @@
     "license": "MIT",
     "version": "1.0.1",
     "exposed-modules": [
-        "Toop", 
-        "Toop.Apply", 
-        "Toop.Take"
+        "Toop" 
     ],
     "elm-version": "0.19.0 <= v < 0.19.1",
     "dependencies": {
