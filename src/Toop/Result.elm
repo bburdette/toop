@@ -1,11 +1,13 @@
-module Toop.Result exposing ( andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14)
+module Toop.Result exposing (andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14)
+
 {-| given a Toop of N results, which all share a common Err type, either return a Toop of
 all the 'Ok' values, or the first Err.
 
 @docs andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14
--}
-import Toop exposing (..)
 
+-}
+
+import Toop exposing (..)
 
 
 {-| compose a result containing a function with a result containing
@@ -18,14 +20,18 @@ andMap =
 
 {-| 1 element toop.
 -}
-resT1 : T1 (Result err a) -> Result err (T1 a)
+resT1 :
+    T1 (Result err a)
+    -> Result err (T1 a)
 resT1 (T1 rs) =
     Result.map T1 rs
 
 
 {-| 2 element toop.
 -}
-resT2 : T2 (Result err a) (Result err b) -> Result err (T2 a b)
+resT2 :
+    T2 (Result err a) (Result err b)
+    -> Result err (T2 a b)
 resT2 (T2 rsa rsb) =
     Ok T2
         |> andMap rsa
@@ -34,7 +40,9 @@ resT2 (T2 rsa rsb) =
 
 {-| 3 element toop.
 -}
-resT3 : T3 (Result err a) (Result err b) (Result err c) -> Result err (T3 a b c)
+resT3 :
+    T3 (Result err a) (Result err b) (Result err c)
+    -> Result err (T3 a b c)
 resT3 (T3 rsa rsb rsc) =
     Ok T3
         |> andMap rsa
@@ -44,7 +52,9 @@ resT3 (T3 rsa rsb rsc) =
 
 {-| 4 element toop.
 -}
-resT4 : T4 (Result err a) (Result err b) (Result err c) (Result err d) -> Result err (T4 a b c d)
+resT4 :
+    T4 (Result err a) (Result err b) (Result err c) (Result err d)
+    -> Result err (T4 a b c d)
 resT4 (T4 rsa rsb rsc rsd) =
     Ok T4
         |> andMap rsa
@@ -55,7 +65,9 @@ resT4 (T4 rsa rsb rsc rsd) =
 
 {-| 5 element toop.
 -}
-resT5 : T5 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) -> Result err (T5 a b c d e)
+resT5 :
+    T5 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e)
+    -> Result err (T5 a b c d e)
 resT5 (T5 rsa rsb rsc rsd rse) =
     Ok T5
         |> andMap rsa
