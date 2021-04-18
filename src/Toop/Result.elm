@@ -2,7 +2,15 @@ module ToopResult exposing (..)
 
 import Toop exposing (..)
 
+{-| given a Toop of N results, which all share a common Err type, either return a Toop of
+all the 'Ok' values, or the first Err.
 
+@docs andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14
+
+-}
+
+{-| compose a result containing a function with a result containing a value.
+-}
 andMap : Result e a -> Result e (a -> b) -> Result e b
 andMap =
     Result.map2 (|>)
