@@ -17,7 +17,7 @@ case Toop.T4 mba mbb mbc mbd of
 
 ```
 
-there are also applyT<n> functions.
+## applyT<n> functions.
 
 apply calls a function using the Toop elements as the arguments.
 
@@ -35,7 +35,7 @@ resultString = Toop.Apply.applyT6 comp args
 
 ```
 
-And then there's the take functions:
+## takeT<n> functions:
 
 ```elm
 
@@ -47,4 +47,25 @@ fiveDmath args =
 
 mbresult = (Toop.Take.takeT5 nums) |> Maybe.map fiveDmath
 
+```
+
+## resT<n> functions:
+
+```elm
+
+type EditState 
+    = MyEdit { uid: Uuid, group: UUID, doc: UUID }
+    | Failed String
+
+
+ToEdit : String -> String -> String -> EditState
+ToEdit uid group doc =
+    Toop.T3 (UUID.fromString uid) (UUID.fromString group) (UUID.fromString doc)
+        |> resT3
+        |> Result.map
+            (\(Toop.T3 uidid groupid docid) ->
+                MyEdit { uid = uidid, group = groupid, doc = docid }
+            )
+        |> Result.withDefault Failed "invalid uuid"
+)
 ```
