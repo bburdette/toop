@@ -1,9 +1,9 @@
-module Toop.Result exposing (andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14)
+module Toop.Result exposing (andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14, resT15, resT16)
 
 {-| given a Toop of N results, which all share a common Err type, either return a Toop of
 all the 'Ok' values, or the first Err.
 
-@docs andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14
+@docs andMap, resT1, resT2, resT3, resT4, resT5, resT6, resT7, resT8, resT9, resT10, resT11, resT12, resT13, resT14, resT15, resT16
 
 -}
 
@@ -246,3 +246,52 @@ resT14 (T14 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm rsn) =
         |> andMap rsl
         |> andMap rsm
         |> andMap rsn
+
+
+{-| 15 element toop.
+-}
+resT15 :
+    T15 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m) (Result err n) (Result err o)
+    -> Result err (T15 a b c d e f g h i j k l m n o)
+resT15 (T15 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm rsn rso) =
+    Ok T15
+        |> andMap rsa
+        |> andMap rsb
+        |> andMap rsc
+        |> andMap rsd
+        |> andMap rse
+        |> andMap rsf
+        |> andMap rsg
+        |> andMap rsh
+        |> andMap rsi
+        |> andMap rsj
+        |> andMap rsk
+        |> andMap rsl
+        |> andMap rsm
+        |> andMap rsn
+        |> andMap rso
+
+
+{-| 16 element toop.
+-}
+resT16 :
+    T16 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m) (Result err n) (Result err o) (Result err p)
+    -> Result err (T16 a b c d e f g h i j k l m n o p)
+resT16 (T16 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm rsn rso rsp) =
+    Ok T16
+        |> andMap rsa
+        |> andMap rsb
+        |> andMap rsc
+        |> andMap rsd
+        |> andMap rse
+        |> andMap rsf
+        |> andMap rsg
+        |> andMap rsh
+        |> andMap rsi
+        |> andMap rsj
+        |> andMap rsk
+        |> andMap rsl
+        |> andMap rsm
+        |> andMap rsn
+        |> andMap rso
+        |> andMap rsp

@@ -1,8 +1,8 @@
-module Toop.Apply exposing (applyT1, applyT2, applyT3, applyT4, applyT5, applyT6, applyT7, applyT8, applyT9, applyT10, applyT11, applyT12, applyT13, applyT14)
+module Toop.Apply exposing (applyT1, applyT2, applyT3, applyT4, applyT5, applyT6, applyT7, applyT8, applyT9, applyT10, applyT11, applyT12, applyT13, applyT14, applyT15, applyT16)
 
 {-| given a function of N arguments, apply that function to a toop of size N.
 
-@docs applyT1, applyT2, applyT3, applyT4, applyT5, applyT6, applyT7, applyT8, applyT9, applyT10, applyT11, applyT12, applyT13, applyT14
+@docs applyT1, applyT2, applyT3, applyT4, applyT5, applyT6, applyT7, applyT8, applyT9, applyT10, applyT11, applyT12, applyT13, applyT14, applyT15, applyT16
 
 -}
 
@@ -105,3 +105,17 @@ applyT13 y (T13 a b c d e f g h i j k l m) =
 applyT14 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> x) -> T14 a b c d e f g h i j k l m n -> x
 applyT14 y (T14 a b c d e f g h i j k l m n) =
     y a b c d e f g h i j k l m n
+
+
+{-| 15 element apply.
+-}
+applyT15 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> x) -> T15 a b c d e f g h i j k l m n o -> x
+applyT15 y (T15 a b c d e f g h i j k l m n o) =
+    y a b c d e f g h i j k l m n o
+
+
+{-| 16 element apply.
+-}
+applyT16 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> p -> x) -> T16 a b c d e f g h i j k l m n o p -> x
+applyT16 y (T16 a b c d e f g h i j k l m n o p) =
+    y a b c d e f g h i j k l m n o p
