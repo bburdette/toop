@@ -18,7 +18,7 @@ andMap =
     Result.map2 (|>)
 
 
-{-| 1 element toop.
+{-| 1 element results to values.
 -}
 resT1 :
     T1 (Result err a)
@@ -27,7 +27,7 @@ resT1 (T1 rs) =
     Result.map T1 rs
 
 
-{-| 2 element toop.
+{-| 2 element results to values.
 -}
 resT2 :
     T2 (Result err a) (Result err b)
@@ -38,7 +38,7 @@ resT2 (T2 rsa rsb) =
         |> andMap rsb
 
 
-{-| 3 element toop.
+{-| 3 element results to values.
 -}
 resT3 :
     T3 (Result err a) (Result err b) (Result err c)
@@ -50,7 +50,7 @@ resT3 (T3 rsa rsb rsc) =
         |> andMap rsc
 
 
-{-| 4 element toop.
+{-| 4 element results to values.
 -}
 resT4 :
     T4 (Result err a) (Result err b) (Result err c) (Result err d)
@@ -63,7 +63,7 @@ resT4 (T4 rsa rsb rsc rsd) =
         |> andMap rsd
 
 
-{-| 5 element toop.
+{-| 5 element results to values.
 -}
 resT5 :
     T5 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e)
@@ -77,7 +77,7 @@ resT5 (T5 rsa rsb rsc rsd rse) =
         |> andMap rse
 
 
-{-| 6 element toop.
+{-| 6 element results to values.
 -}
 resT6 :
     T6 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f)
@@ -92,7 +92,7 @@ resT6 (T6 rsa rsb rsc rsd rse rsf) =
         |> andMap rsf
 
 
-{-| 7 element toop.
+{-| 7 element results to values.
 -}
 resT7 :
     T7 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g)
@@ -108,7 +108,7 @@ resT7 (T7 rsa rsb rsc rsd rse rsf rsg) =
         |> andMap rsg
 
 
-{-| 8 element toop.
+{-| 8 element results to values.
 -}
 resT8 :
     T8 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h)
@@ -125,7 +125,7 @@ resT8 (T8 rsa rsb rsc rsd rse rsf rsg rsh) =
         |> andMap rsh
 
 
-{-| 9 element toop.
+{-| 9 element results to values.
 -}
 resT9 :
     T9 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i)
@@ -143,7 +143,7 @@ resT9 (T9 rsa rsb rsc rsd rse rsf rsg rsh rsi) =
         |> andMap rsi
 
 
-{-| 10 element toop.
+{-| 10 element results to values.
 -}
 resT10 :
     T10 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j)
@@ -162,7 +162,7 @@ resT10 (T10 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj) =
         |> andMap rsj
 
 
-{-| 11 element toop.
+{-| 11 element results to values.
 -}
 resT11 :
     T11 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k)
@@ -182,7 +182,7 @@ resT11 (T11 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk) =
         |> andMap rsk
 
 
-{-| 12 element toop.
+{-| 12 element results to values.
 -}
 resT12 :
     T12 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l)
@@ -203,7 +203,7 @@ resT12 (T12 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl) =
         |> andMap rsl
 
 
-{-| 13 element toop.
+{-| 13 element results to values.
 -}
 resT13 :
     T13 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m)
@@ -225,7 +225,7 @@ resT13 (T13 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm) =
         |> andMap rsm
 
 
-{-| 14 element toop.
+{-| 14 element results to values.
 -}
 resT14 :
     T14 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m) (Result err n)
@@ -248,7 +248,7 @@ resT14 (T14 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm rsn) =
         |> andMap rsn
 
 
-{-| 15 element toop.
+{-| 15 element results to values.
 -}
 resT15 :
     T15 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m) (Result err n) (Result err o)
@@ -272,7 +272,7 @@ resT15 (T15 rsa rsb rsc rsd rse rsf rsg rsh rsi rsj rsk rsl rsm rsn rso) =
         |> andMap rso
 
 
-{-| 16 element toop.
+{-| 16 element results to values.
 -}
 resT16 :
     T16 (Result err a) (Result err b) (Result err c) (Result err d) (Result err e) (Result err f) (Result err g) (Result err h) (Result err i) (Result err j) (Result err k) (Result err l) (Result err m) (Result err n) (Result err o) (Result err p)
