@@ -1,8 +1,8 @@
-module Toop.Take exposing (takeT1, takeT2, takeT3, takeT4, takeT5, takeT6, takeT7, takeT8, takeT9, takeT10, takeT11, takeT12, takeT13, takeT14)
+module Toop.Take exposing (takeT1, takeT2, takeT3, takeT4, takeT5, takeT6, takeT7, takeT8, takeT9, takeT10, takeT11, takeT12, takeT13, takeT14, takeT15, takeT16)
 
 {-| functions to make an N element toop from a List.
 
-@docs takeT1, takeT2, takeT3, takeT4, takeT5, takeT6, takeT7, takeT8, takeT9, takeT10, takeT11, takeT12, takeT13, takeT14
+@docs takeT1, takeT2, takeT3, takeT4, takeT5, takeT6, takeT7, takeT8, takeT9, takeT10, takeT11, takeT12, takeT13, takeT14, takeT15, takeT16
 
 -}
 
@@ -183,6 +183,49 @@ takeT13 l =
 takeT14 : List a -> Maybe ( T14 a a a a a a a a a a a a a a, List a )
 takeT14 l =
     andX T14 l
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+
+
+{-| 15 element take.
+-}
+takeT15 : List a -> Maybe ( T15 a a a a a a a a a a a a a a a, List a )
+takeT15 l =
+    andX T15 l
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
+
+
+{-| 16 element take.
+-}
+takeT16 : List a -> Maybe ( T16 a a a a a a a a a a a a a a a a, List a )
+takeT16 l =
+    andX T16 l
+        |> Maybe.andThen (tuply andX)
+        |> Maybe.andThen (tuply andX)
         |> Maybe.andThen (tuply andX)
         |> Maybe.andThen (tuply andX)
         |> Maybe.andThen (tuply andX)
